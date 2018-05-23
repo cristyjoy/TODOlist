@@ -15,6 +15,7 @@ class ToDo(object):
            print (lists)
           
     def remove(self,Task):
+<<<<<<< HEAD
         with open("task.txt", "w" + "\n") as f:
             remove = f.write(Task)
             # print(remove)
@@ -26,6 +27,19 @@ class ToDo(object):
     #         update = f.write(Task + ' ' + time_input + "\n" + day +'/'+ month +'/'+ year + "\n" + "\n")
     #         print(update)
     #         f.close()
+=======
+        with open("output.txt", "w" + "\n") as f:
+            remove = f.write(Task)
+            print(remove)
+            f.close()
+
+
+    def update(self, Task, year, month, day, time_input):
+        with open("task.txt", "w" + "\n") as f:
+            update = f.write(Task + ' ' + time_input + "\n" + day +'/'+ month +'/'+ year + "\n" + "\n")
+            print(update)
+            f.close()
+>>>>>>> cbe87cee94946b9ccc853b447992d4b69a4fdc56
 
 
     def save(self, Task, year, month, day, time_input):
@@ -49,6 +63,11 @@ if __name__ == '__main__':
     t = ToDo(Task, year, month, day, time_input)
     t.save(Task, year, month, day, time_input)
     t.list()
+<<<<<<< HEAD
     print(t.remove(Task))
     # t.update(Task, year, month, day, time_input)   
+=======
+    t.remove(Task)
+    t.update(Task, year, month, day, time_input)   
+>>>>>>> cbe87cee94946b9ccc853b447992d4b69a4fdc56
      
